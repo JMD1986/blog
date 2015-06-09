@@ -1,4 +1,11 @@
 <h2>New Entry</h2>
-<% form_for(post) do |format| %>
-  <%format.label :title, "Title Here" %>
-  <%format.text_field :title %>
+<%= form_for(post) do |format| %>
+
+  <%= format.label :title, "Title Here" %>
+  <%= format.text_field :title %>
+
+  <%= format.label :body, "Thoughts..." %>
+  <%= format.text_area :body %>
+
+  <%= format.submit %>
+<%end %>

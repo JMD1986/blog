@@ -1,3 +1,29 @@
-// Place all the styles related to the post controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  // padding: 0;
+}
+
+body {
+  font-family: "Helvetica", sans-serif;
+  background: linear-gradient(grey, white);
+  padding-bottom: 10px;
+}
+
+header {
+background-image: url(dark_embroidery.png);
+padding: 20px;
+max-height: 30px;
+text-align: center;
+font-size: 22px;
+}
+
+footer {
+  font-family: "Helvetica", sans-serif;
+  background-image: url(dark_embroidery.png);
+  padding: 20px;
+  max-height: 30px;
+  text-align: center;
+  font-size: 22px;
+  margin-bottom: -8px;
+}

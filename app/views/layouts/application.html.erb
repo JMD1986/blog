@@ -1,14 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Blog</title>
+  <title>John Daugherty</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+<header>
+  <nav class="header_nav">
+    <p><h1>Blog</h1></p>
+    <p><a href="/todos">more stuff</a></p>
+  </nav>
+</header>
 
 <%= yield %>
 
+<footer>copyright 2015. TYBG.</footer>
 </body>
 </html>

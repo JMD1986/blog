@@ -1,14 +1,16 @@
 class PostController < ApplicationController
+
   def index
     all_posts = Post.all
     respond_to do |format|
       format.html do
         render "index.html.erb", locals: { posts: all_posts }
-      end
+      end #format
       #rescue goes in here somewhere. get that later.
       format.json do
         render json: all_posts
-    format
+      end # format
+    end #respond
   end #index
 
   def new
@@ -24,16 +26,16 @@ class PostController < ApplicationController
         end
         format.json do
           render json: found_post
-        end
-      end
-    end
+        end #format
+      end #respond
+    end #if
   end #show
 
   def new
     new_post = Post.new
     respond_to do |format|
       format.html do
-        render "new.html.erb". locals: { post: new_post }
+        render "new.html.erb", locals: { post: new_post }
       end
       format.json do
         render json: new_post
@@ -41,8 +43,10 @@ class PostController < ApplicationController
     end
   end #new
 
-  def create
-    begin
-      post
+  # def create
+  #   begin
+  #     post
+  #   end #begin
+  # end #create
 
 end #class

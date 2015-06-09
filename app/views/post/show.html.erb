@@ -1,0 +1,17 @@
+<div class="blog_title">
+  <p>
+<%= post.title %>
+</p>
+</div>
+
+<div class="blog_post_body">
+  <p>
+<%= post.body %>
+  </p>
+</div>
+
+
+<p>
+<%= button_to "delete", { controller: "post", action: "destroy", id:post.id}, method: "delete" %>
+</p>
+

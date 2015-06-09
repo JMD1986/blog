@@ -31,6 +31,10 @@ class PostController < ApplicationController
     end #if
   end #show
 
+  def about
+    # redirect
+  end #about
+
   def new
     new_post = Post.new
     respond_to do |format|

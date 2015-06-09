@@ -43,10 +43,21 @@ class PostController < ApplicationController
     end
   end #new
 
-  # def create
-  #   begin
-  #     post
-  #   end #begin
-  # end #create
+  def create
+    begin
+      # not going to use this because I honestly don't understand it well enough yet
+      # new_blog_post = Post.create(post_params)
+      new_blog_post = Post.create(title: params[:post].fetch(:title),
+                                    body: params[:post].fetch(:body))
+      respond_to do |format|
+        format.html do
+          render json: new_blog_post
+        end #format
+        format.json do
+          render json: new_blog_post
+        end #format
+      end#respond
+    end #begin
+  end #create
 
 end #class

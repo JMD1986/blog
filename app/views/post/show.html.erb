@@ -1,3 +1,4 @@
+<div class="show_page">
 <div class="blog_title">
   <p>
 <%= post.title %>
@@ -12,6 +13,6 @@
 
 
 <p>
-<%= button_to "delete", { controller: "post", action: "destroy", id:post.id}, method: "delete" %>
+<%= button_to "delete", data: { controller: "post", action: "destroy", id:post.id}, method:"delete" "delete" %>
 </p>
-
+</div>

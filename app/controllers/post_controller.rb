@@ -55,7 +55,7 @@ class PostController < ApplicationController
                                     body: params[:post].fetch(:body))
       respond_to do |format|
         format.html do
-          render json: new_blog_post
+          redirect_to "/index"
         end #format
         format.json do
           render json: new_blog_post
@@ -63,5 +63,19 @@ class PostController < ApplicationController
       end#respond
     end #begin
   end #create
+
+  def destroy
+    if Post.exists?(params[:id])
+      Post.destroy(params[:id])
+      respond_to do |format|
+        format.html do
+          redirect_to "index"
+        end #format
+        format.json do
+          render json: {message: "post deleted"}
+        end #format
+      end #respond
+    end #if
+  end #destroy
 
 end #class

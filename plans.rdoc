@@ -1,0 +1,6 @@
+plans
+immediate
+  style:
+    remove underlines on links
+    change link color to white
+    space top links out

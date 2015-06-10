@@ -67,14 +67,7 @@ class PostController < ApplicationController
   def destroy
     if Post.exists?(params[:id])
       Post.destroy(params[:id])
-      respond_to do |format|
-        format.html do
-          redirect_to "index"
-        end #format
-        format.json do
-          render json: {message: "post deleted"}
-        end #format
-      end #respond
+      redirect_to "/index"
     end #if
   end #destroy
 

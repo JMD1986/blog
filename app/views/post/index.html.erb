@@ -1,16 +1,16 @@
 <div class="main_blog_area">
 <% posts.each do |post| %>
 
-<div class="blog_title">
-  <p>
-<%=link_to post.title, { controller: "post", action: "show", id:post.id}, method: "get" %>
-</p>
-</div>
+  <div class="blog_title">
+    <p>
+      <%=link_to post.title, { controller: "post", action: "show", id:post.id}, method: "get" %>
+    </p>
+  </div>
 
-<div class="blog_post_body">
-  <p>
-<%= post.body %>
-  </p>
-</div>
+  <div class="blog_post_body">
+    <p>
+      <%= post.body %>
+    </p>
+  </div>
 </div>
 <%end%>
